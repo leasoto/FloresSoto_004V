@@ -1,0 +1,99 @@
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button 
+          defaultHref="/"
+          text="volver"
+          color="primary"
+          mode="ios"></ion-back-button>
+    </ion-buttons>
+      <ion-title class="titulo">Crear cuenta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <form #formulario="ngForm" (ngSubmit) ="onSubmit()">
+
+  <ion-item>
+    <ion-label required position="stacked">Nombre: </ion-label>
+    <ion-input type="input" 
+                 name="nombre" [(ngModel)]= "usuario.nombre"
+                 required>
+      </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label  required position="stacked">Apellidos: </ion-label>
+    <ion-input type="input" 
+                 name="apellido" [(ngModel)]= "usuario.apellido"
+                 required>
+      </ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label>Género</ion-label>
+    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Select One" required 
+    name="genero" [(ngModel)]= "usuario.genero">
+      <ion-select-option value="brown">Femenino</ion-select-option>
+      <ion-select-option value="blonde">Masculino</ion-select-option>
+      <ion-select-option value="black">Otro</ion-select-option>
+
+    </ion-select>
+  </ion-item>
+
+
+  
+
+  <ion-item>
+    <ion-label position="floating">Fecha nacimiento</ion-label>
+    <ion-datetime displayFormat="D MMM YYYY" min="1945" max="2005" placeholder="Seleccione su fecha"
+    monthShortNames="enero, febrero, marzo, abril, mayo, junio, julio, agosto,
+     septiembre, agosto,octubre, noviembre, diciembre"  name="fecha" [(ngModel)]= "usuario.fecha" required ></ion-datetime>
+  </ion-item>
+
+
+
+    <ion-item>
+      <ion-label required position="stacked">Email: </ion-label>
+      <ion-input type="email" 
+                 name="email" [(ngModel)]= "usuario.email"
+                 pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                 required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label required position="stacked">Contraseña: </ion-label>
+      <ion-input type="password" 
+                 name="password" [(ngModel)]= "usuario.password"
+                 required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label required position="stacked">Confirmar contraseña: </ion-label>
+      <ion-input type="password" 
+                 name="password2" [(ngModel)]= "usuario.password2"
+                 required>
+      </ion-input>
+    </ion-item>
+
+    <ion-button (click)="showAlert()" [disabled] ="formulario.invalid"
+        type="submit" expand="block" routerLink="/inicio" color="success">
+      Enviar Datos
+    </ion-button>
+
+
+
+  
+
+
+  </form>
+
+
+</ion-content>

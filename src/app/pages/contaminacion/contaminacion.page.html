@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar class="ion-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="/" text="volver" color ="primary" mode ="ios">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+    <ion-img class="logo" src="/assets/logo3.jpeg"></ion-img>
+  </ion-toolbar>
+  
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+    
+    <img src="assets/autoco2.jpg"/>
+    <ion-card-content>
+      <ion-card-title>
+        ¿Qué es el Co2?
+      </ion-card-title>
+      <p>
+        En el medio ambiente, el dióxido de carbono 
+        es la sustancia que más contribuye al efecto invernadero, es decir,
+         que absorbe gran parte de la radiación solar incidente, reteniéndola cerca de la superficie terrestre y produciendo una calentamiento progresivo de la misma.
+      </p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name="star"></ion-icon>
+          Favorite
+        </button>
+      </ion-col>
+
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name="share-social-outline"></ion-icon>
+          Share
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+</ion-content>

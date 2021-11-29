@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "login-52902": {
+      "hosting": {
+        "app": [
+          "login-52902"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "login-52902"
+  }
+}

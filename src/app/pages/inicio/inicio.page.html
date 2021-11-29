@@ -1,0 +1,94 @@
+<ion-header >
+  <ion-scroll scrollX="false">
+  </ion-scroll>
+  <ion-toolbar class="ion-toolbar">
+
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+        
+      </ion-button>
+      
+    </ion-buttons>
+    <ion-img class="logo" src="/assets/logo3.jpeg"></ion-img>
+
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content [scrollEvents]="false">
+
+  <!--
+<ion-button routerLink = "/alert">
+  alert
+</ion-button>
+<ion-button routerLink = "/action-sheet">
+  action-sheet
+</ion-button>
+<ion-button routerLink = "/task">
+  task
+</ion-button>
+<ion-button routerLink = "/input">
+  input
+</ion-button>
+
+-->
+
+
+
+<ion-row>
+  <ion-col>
+    <ion-fab-button class="button1" routerLink = "/contaminacion" color="light" >
+      <ion-icon class="co2inicio" name="leaf-outline" ></ion-icon>
+    </ion-fab-button>
+
+    <ion-text class="letraboton2">¿Qué es el Co2?</ion-text>
+
+  </ion-col>
+
+  <ion-col>
+  <ion-fab-button class="button2"routerLink = "/autos" color="light">
+    <ion-icon class="co2inicio" name="car-sport-outline" ></ion-icon>
+  </ion-fab-button>
+  <center>
+  <ion-text class="letraboton">Conoce los vehículos</ion-text>
+  </center>
+  </ion-col>
+
+<ion-col>
+<ion-fab-button class="button3" routerLink = "/noticias" color="light" >
+  <ion-icon class="co2inicio" name="earth-outline" ></ion-icon>
+</ion-fab-button>
+<center>
+<ion-text class="letraboton3">Últimas noticias</ion-text>
+</center>
+</ion-col>
+</ion-row>
+
+
+
+
+  <ion-card>
+    <ion-card-header>
+      
+      <ion-card-subtitle class="subtitulo2">Un poco de nosotros</ion-card-subtitle > 
+      <ion-img src="/assets/ecofriendly.jpg"></ion-img>
+      <ion-card-title class="titulo2" color="success">¿Qué es TransLife? </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="ion-pading-contenido">
+      TransLife es un aplicativo que está pensado para medir la huella 
+      de carbono de aquellas empresas que generan servicios de mantención 
+      de vehículos, la cual de acuerdo a la marca, modelo, año y tipo de
+       servicios, nos mostrara las toneladas de CO2 emitidas al final de 
+       ciclo y las medidas de mitigación hacia el medio ambiente.
+    </ion-card-content>
+
+  </ion-card>
+
+  
+
+
+</ion-content>
+

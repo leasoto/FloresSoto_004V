@@ -1,0 +1,75 @@
+<ion-header >
+  <ion-scroll scrollX="false">
+  </ion-scroll>
+  <ion-toolbar class="ion-toolbar">
+
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+        
+      </ion-button>
+      
+    </ion-buttons>
+    <ion-img class="logo" src="/assets/logo3.jpeg"></ion-img>
+
+  </ion-toolbar>
+
+</ion-header>
+
+
+
+<ion-content>
+  <ion-button (click)="logout()" *ngIf="usuarioLogueado">
+    Log-out
+   </ion-button>
+  <form>
+    <ion-card-header>
+      <ion-card-title>Inicio de sesión</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <form #formulario="ngForm" (ngSubmit)="buscarUsuarios(newUsuarios.usuario,newUsuarios.contrasenia)" *ngIf="!usuarioLogueado">
+        <ion-item>
+          <ion-label>Usuario:</ion-label>
+          <ion-input type="text" placeholder="Escriba su usuario"
+                     name="Usuario" [(ngModel)]="newUsuarios.usuario"
+                     required></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Contraseña:</ion-label>
+          <ion-input type="password" placeholder="Contraseña"
+                     name="password" [(ngModel)]="newUsuarios.contrasenia"
+                     required
+                     minlength="0"
+                     maxlength="15"></ion-input>
+        </ion-item>
+        <ion-button [disabled]="formulario.invalid" type="submit" expand="block" >
+    
+          Log-in
+          
+        </ion-button>
+      </form>
+      <br>
+    </ion-card-content>
+ 
+
+
+  <ion-row>
+    <ion-col>
+      <ion-col>
+        <center>
+      <a  routerLink="/login" class="pass2">¿Olvidaste tu contraseña?</a>
+      </center>
+      <br>
+      <center>
+        <a [routerLink]="['/registro']" class="cuenta">¿No Tienes cuenta?</a>
+      </center>
+    
+    </ion-col>
+    </ion-col>
+  </ion-row>
+</form>
+
+</ion-content>
+

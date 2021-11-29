@@ -1,0 +1,147 @@
+<ion-header>
+
+  <ion-toolbar class="ion-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="/" text="volver" color ="primary" mode ="ios">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-img class="logo" src="/assets/logo3.jpeg"></ion-img>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-row>
+<ion-fab-button class="button1"routerLink = "/autos" color="light">
+
+  <ion-img  src="/assets/Logo-Mercedes-Benz.png"></ion-img>
+</ion-fab-button>
+
+<ion-fab-button class="button2"routerLink = "/autos" color="light">
+  <ion-img  src="/assets/Chevrolet-Logo.png"></ion-img>
+</ion-fab-button>
+
+<ion-fab-button class="button2"routerLink = "/autos" color="light">
+  <ion-img  src="/assets/BMW-Logo.png"></ion-img>
+</ion-fab-button>
+
+<ion-fab-button class="button2"routerLink = "/autos" color="light">
+  <ion-img  src="/assets/ferrari.png"></ion-img>
+</ion-fab-button>
+
+<ion-fab-button class="button2"routerLink = "/autos" color="light">
+  <ion-icon class="co2inicio"  name="add-outline" ></ion-icon>
+</ion-fab-button>
+</ion-row>
+<p>
+  <center>
+    <ion-label class="titulo"> Últimas novedades en Hibridos</ion-label>
+  </center> 
+</p>
+<!-----------primera tarjeta------------>
+  <ion-card>
+    <img src="assets/toyotaprius.jpg"/>
+    <ion-card-content>
+      <ion-card-title>
+        Toyota Prius
+      </ion-card-title>
+      <p>
+        La emisión de CO2 de la versión híbrida es de 79 g/km en todas las opciones; 
+        por su lado, la media de gramos por kilómetro en el resto de motores nos daría 108 g/km. 
+        Alrededor de un 40% más.
+      </p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name="star"></ion-icon>
+          Favorite
+        </button>
+      </ion-col>
+
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name="share-social-outline"></ion-icon>
+          Share
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+
+
+  <!-----------segunda tarjeta------------>
+  <ion-card class="cardautos">
+    <img src="assets/hyundaiioniq.jpg" />
+    <ion-card-content>
+      <ion-card-title>
+        Hyundai Ioniq
+      </ion-card-title>
+      <p>
+        La opción que ofrece Hyundai Motor de México en este sector, desde 2017,
+         es su sedán híbrido Ioniq. Su emisión de CO2 es apenas del 79g/Km,
+          lo que lo ubica en el rango más bajo contaminante entre los vehículos que utilizan
+           combustión interna. Esto se debe a que cuenta con un motor de 1.6 litros, mismo que combina
+            su funcionamiento con el motor eléctrico.
+      </p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name="star"></ion-icon>
+          Favorite
+        </button>
+      </ion-col>
+
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name="share-social-outline"></ion-icon>
+          Share
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+
+  <!-----------tercera tarjeta------------>
+  <ion-card>
+    <img src="assets/kiaoptima.jpg"/>
+    <ion-card-content>
+      <ion-card-title>
+        Kia Optima
+      </ion-card-title>
+      <p>
+        El primer modelo híbrido enchufable de Kia puede llegar a recorrer hasta 54 kilómetros sin emisiones, 
+        logrando un consumo medio de combustible de 1,6 litros a los 100 kilómetros y unas emisiones de CO2 de 37 g/km.
+      </p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name="star"></ion-icon>
+          Favorite
+        </button>
+      </ion-col>
+
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name="share-social-outline"></ion-icon>
+          Share
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+</ion-content>
+

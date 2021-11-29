@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="volver" color ="primary" mode ="ios"> </ion-back-button>
+    </ion-buttons>
+    <ion-row>
+    <center>
+    <ion-title >Listado</ion-title>
+  </center>
+  </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list #myList>
+
+
+    <ion-list>
+      <ion-item-sliding *ngFor="let dato of datos">
+        <ion-item>
+          <ion-label text-wrap> 
+            <h3>{{dato.patente}}</h3>
+            <ion-text color="secondary">
+              <p>{{dato.modelo}}</p>
+            </ion-text>
+            <p>{{dato.modified | date: 'short'}}</p>
+          </ion-label>
+        </ion-item>
+        <ion-item-buttons side="end">
+          <ion-button color="secondary" (click)="updateDatos(dato)" (click)="showConfirm()">Actualizar</ion-button>
+         <ion-button color="danger" (click)="deleteDatos(dato)"  routerLink = "/modificar" >Eliminar</ion-button> 
+        </ion-item-buttons>
+      </ion-item-sliding>
+    </ion-list>
+  </ion-list>
+</ion-content>
+

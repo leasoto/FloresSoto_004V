@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="volver" color ="primary" mode ="ios"> </ion-back-button>
+    </ion-buttons>
+    <ion-row>
+    <center>
+    <ion-title >Ingresar vehículos</ion-title>
+  </center>
+  </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+<ion-content>
+  <ion-item>
+    <ion-label position="stacked">Patente</ion-label>
+    <ion-input type="text" [(ngModel)]="newDato.patente" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Modelo vehículo</ion-label>
+    <ion-input type="text" [(ngModel)]="newDato.modelo" required></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="stacked">Nombre dueño</ion-label>
+    <ion-input type="text" [(ngModel)]="newDato.edad" required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Huella</ion-label>
+    <ion-input type="text" [(ngModel)]="newDato.huella" required></ion-input>
+  </ion-item>
+
+  <ion-button (click)="addDatos()" expand="full">
+    Ingresar vehículo
+  </ion-button>
+
+  <ion-button (click)="addDatos()" expand="full" routerLink = "/modificar">
+    Ver listado de vehículos
+  </ion-button>
+  <ion-list #myList>
+
+  </ion-list>
+</ion-content>
+
